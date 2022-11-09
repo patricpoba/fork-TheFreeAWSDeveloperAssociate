@@ -1,0 +1,9 @@
+AWSTemplateFormatVersion: 2010-09-09
+Description: >-
+  Testing CFN Infrastructure template for EC2
+Resources:
+  WebServer:
+    Type: AWS::EC2::Instance
+    Properties: 
+      InstanceType: t2.micro
+      ImageId: ami-0a9790c5a531163ee 
