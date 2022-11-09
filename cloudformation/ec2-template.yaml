@@ -1,9 +1,14 @@
 AWSTemplateFormatVersion: 2010-09-09
 Description: >-
   Testing CFN Infrastructure template for EC2
+Parameters:
+  ImageId: 
+    Description: AMI to use. eg ami-089a545a9ed9893b6
+    Default: ami-089a545a9ed9893b6
+    Type: String
 Resources:
   WebServer:
     Type: AWS::EC2::Instance
     Properties: 
       InstanceType: t2.micro
-      ImageId: ami-089a545a9ed9893b6
+      ImageId: !Ref ImageId
